@@ -69,3 +69,42 @@ In the terminal, run the following command at the project folder:
 ```
 node ace serve
 ```
+
+### Routes
+To get AdonisJS routes in a terminal, use the following command:
+
+```
+node ace list:routes
+```
+
+### Routes in this API
+
+### GET /api
+Return a Hello World as JSON. This is just to test the api
+
+### GET /api/moments
+Return all the moments stored on database
+
+### GET /api/moments/:id
+Return a single moment by it's ID
+
+### POST /api/moments
+Store a Moment
+
+Request body:
+```
+title: string
+description: string
+image: file
+```
+
+### PUT|PATCH /api/moments/:id
+Update a moment by the id sent in URL parameter
+
+The request body to update is the same as "Store" route above.
+
+### DELETE /api/moments/:id
+Delete a moment by the id sent in URL
+
+### POST /api/moments/:momentId/comments
+Store a comment in a moment by the id sent in URL
